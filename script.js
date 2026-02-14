@@ -61,65 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // Download Counter Logic (Global Realtime via CountAPI)
+    // Download Buttons Logic
     const downloadBtns = document.querySelectorAll('.download-btn');
-    const counterElements = document.querySelectorAll('.counter-number');
     
-    // Config for CountAPI (Free global counter service)
-    const namespace = 'vplayer-website-unique-123'; // Unique namespace for your app
-    const key = 'downloads';
-    
-    // Initial fallback logic (Organic growth based on time)
-    // Starts at 1248 on Feb 1st, 2026, and grows by ~50 per day
-    const startDate = new Date('2026-02-01').getTime();
-    const now = new Date().getTime();
-    const daysPassed = (now - startDate) / (1000 * 60 * 60 * 24);
-    let baseCount = Math.floor(1248 + (daysPassed * 52)); 
-
-    const updateDisplay = (val) => {
-        counterElements.forEach(el => {
-            el.style.transform = 'scale(1.2)';
-            el.style.color = 'var(--emerald)';
-            el.textContent = val.toLocaleString();
-            
-            setTimeout(() => {
-                el.style.transform = 'scale(1)';
-                el.style.color = 'var(--primary)';
-            }, 300);
-        });
-    };
-
-    // Fetch global count on load
-    const fetchGlobalCount = async () => {
-        try {
-            const response = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`);
-            const data = await response.json();
-            if (data.value) {
-                baseCount = Math.max(baseCount, data.value);
-            }
-            updateDisplay(baseCount);
-        } catch (err) {
-            console.warn('CountAPI unavailable, using organic fallback');
-            updateDisplay(baseCount);
-        }
-    };
-
-    fetchGlobalCount();
-
     downloadBtns.forEach(btn => {
-         btn.addEventListener('click', async (e) => {
-             // We no longer prevent default so the redirect works
-             // but we still trigger the counter logic
-             
-             baseCount++;
-             updateDisplay(baseCount);
-
-            // Attempt to update global counter
-            try {
-                await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
-            } catch (err) {
-                console.error('Failed to update global count');
-            }
+        btn.addEventListener('click', () => {
+            // Optional: You could add simple click tracking here if needed
+            console.log('Download button clicked');
         });
     });
 
