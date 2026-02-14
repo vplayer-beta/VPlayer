@@ -107,11 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchGlobalCount();
 
     downloadBtns.forEach(btn => {
-        btn.addEventListener('click', async (e) => {
-            if (btn.getAttribute('href') === '#') e.preventDefault();
-            
-            baseCount++;
-            updateDisplay(baseCount);
+         btn.addEventListener('click', async (e) => {
+             // We no longer prevent default so the redirect works
+             // but we still trigger the counter logic
+             
+             baseCount++;
+             updateDisplay(baseCount);
 
             // Attempt to update global counter
             try {
