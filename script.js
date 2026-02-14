@@ -61,6 +61,40 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+    // Download Counter Logic
+    const downloadBtns = document.querySelectorAll('.download-btn');
+    const counterElements = document.querySelectorAll('.counter-number');
+    
+    // Initial random count (simulating a real database count)
+    let count = 1248;
+
+    downloadBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Prevent actual download for demo
+            if (btn.getAttribute('href') === '#') {
+                e.preventDefault();
+            }
+            
+            // Increment count
+            count++;
+            
+            // Update all counter elements with animation
+            counterElements.forEach(el => {
+                el.style.transform = 'scale(1.2)';
+                el.style.color = 'var(--emerald)';
+                el.textContent = count.toLocaleString();
+                
+                setTimeout(() => {
+                    el.style.transform = 'scale(1)';
+                    el.style.color = 'var(--primary)';
+                }, 300);
+            });
+            
+            // In a real app, you'd send an AJAX request here to update the DB
+            console.log('Download tracked: ' + count);
+        });
+    });
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
