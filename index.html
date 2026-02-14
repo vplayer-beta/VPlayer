@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPlayer | The Ultimate High-Performance Video Player</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-theme">
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="Vplayer.png" alt="VPlayer Logo" class="logo-img">
+                <span>VPlayer</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#tech">Tech Specs</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#" class="btn btn-primary btn-sm">Download</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="fade-in">The Ultimate High-Performance Video Player for <span class="text-gradient">Power Users</span>.</h1>
+                    <p class="fade-in delay-1">Experience seamless 4K playback, hardware-accelerated transcoding, and professional-grade conversion—all in one beautiful, dark-themed desktop app.</p>
+                    <div class="hero-actions fade-in delay-2">
+                        <a href="#" class="btn btn-primary btn-lg">
+                            <i data-lucide="download"></i>
+                            Download for Windows (Beta)
+                        </a>
+                        <a href="#features" class="btn btn-secondary btn-lg">Explore Features</a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in delay-3">
+                    <div class="app-mockup">
+                        <div class="mockup-header">
+                            <div class="dots"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="mockup-content">
+                            <video autoplay muted loop playsinline class="hero-video">
+                                <source src="4k.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section id="features" class="features section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Features That Set Us Apart</h2>
+                    <p class="section-subtitle">Powerful tools designed for your ultimate viewing experience.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i data-lucide="zap"></i></div>
+                        <h3>Performance Without Compromise</h3>
+                        <p>Stop worrying about codecs. VPlayer uses an intelligent live-transcoding engine that detects your GPU (NVIDIA, AMD, or Intel) to deliver smooth playback.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i data-lucide="refresh-cw"></i></div>
+                        <h3>Professional Video Converter</h3>
+                        <p>Built-in converter supports high-speed remuxing and advanced CRF quality modes. Convert to MP4, MKV, or WebM instantly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i data-lucide="layout"></i></div>
+                        <h3>Smart Media Management</h3>
+                        <p>Organize your library effortlessly. Create custom playlists and browse folder-based collections with instant thumbnails.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i data-lucide="lock"></i></div>
+                        <h3>Secure Password Protection</h3>
+                        <p>Keep your private playlists and sidebar folders safe with our built-in password protect system and folder-level security.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i data-lucide="puzzle"></i></div>
+                        <h3>Extensible Plugin System</h3>
+                        <p>Import any .js visualizer to transform your audio into a stunning light show. Built for creators and developers.</p>
+                    </div>
+                </div>
+
+                <!-- Visualizer Showcase -->
+                <div class="visualizer-showcase section-padding-top">
+                    <div class="showcase-layout">
+                        <div class="showcase-content">
+                            <h2 class="section-title">Stunning <span class="text-emerald">Emerald Green</span> Visualizers</h2>
+                            <p>Experience your music in a whole new light. Our plugin system allows for deep customization, including this breathtaking emerald green theme that reacts in real-time to your audio frequencies.</p>
+                            <ul class="check-list">
+                                <li><i data-lucide="check-circle" class="text-emerald"></i> High-fidelity frequency mapping</li>
+                                <li><i data-lucide="check-circle" class="text-emerald"></i> Customizable color gradients</li>
+                                <li><i data-lucide="check-circle" class="text-emerald"></i> GPU-accelerated rendering</li>
+                            </ul>
+                        </div>
+                        <div class="showcase-visual">
+                            <div class="visualizer-container">
+                                <img src="image.png" alt="Emerald Green Visualizer" class="visualizer-img">
+                                <div class="emerald-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer API Section -->
+                <div class="developer-api section-padding-top">
+                    <div class="showcase-layout reverse">
+                        <div class="showcase-visual">
+                            <div class="code-box api-code">
+                                <pre><code><span class="code-comment">/**
+ * Custom Visualizer API
+ * Create your own aesthetic with JavaScript & Canvas
+ */</span>
+<span class="code-keyword">const</span> MyCustomVisualizer = {
+    name: <span class="code-string">"Night Beach"</span>,
+    theme: {
+        accentColor: <span class="code-string">"#55CCFF"</span>, <span class="code-comment">// Neon Cyan</span>
+        backgroundColor: <span class="code-string">"#030918"</span>, <span class="code-comment">// Deep Midnight</span>
+    },
+    
+    <span class="code-comment">// React to live audio frequencies</span>
+    <span class="code-function">draw</span>(ctx, audioData) {
+        <span class="code-keyword">const</span> intensity = audioData.avgAmplitude;
+        <span class="code-comment">// Your custom drawing logic here...</span>
+    }
+};</code></pre>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <h2 class="section-title">Built for <span class="text-gradient">Developers</span></h2>
+                            <p>Don't just listen—see your music. VPlayer features a powerful, community-driven plugin system for JavaScript-based audio visualizers. Use our simple yet flexible API to create stunning light shows.</p>
+                            <ul class="check-list">
+                                <li><i data-lucide="code-2" class="text-primary"></i> Simple JavaScript API</li>
+                                <li><i data-lucide="zap" class="text-primary"></i> Real-time Audio Data access</li>
+                                <li><i data-lucide="share-2" class="text-primary"></i> Easy to Build and Share</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Media Management Showcase -->
+        <section class="media-management section-padding bg-alt">
+            <div class="container">
+                <div class="showcase-layout reverse">
+                    <div class="showcase-visual">
+                        <div class="visualizer-container">
+                            <img src="Panel.png" alt="Smart Media Panel" class="visualizer-img">
+                        </div>
+                    </div>
+                    <div class="showcase-content">
+                        <h2 class="section-title">Smart <span class="text-gradient">Media Management</span></h2>
+                        <p>Organize your library effortlessly. Our intuitive panel allows you to manage playlists, browse folders, and access your media with a powerful drag-and-drop interface.</p>
+                        <ul class="check-list">
+                            <li><i data-lucide="folder" class="text-primary"></i> Folder-based collections</li>
+                            <li><i data-lucide="list-music" class="text-primary"></i> Custom playlists</li>
+                            <li><i data-lucide="mouse-pointer-2" class="text-primary"></i> Drag-and-drop simplicity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy & Security Showcase -->
+        <section class="security section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Secure <span class="text-primary">Password Protection</span></h2>
+                    <p class="section-subtitle">Your privacy is our priority. Keep your media safe with advanced locking mechanisms.</p>
+                </div>
+                <div class="security-grid">
+                    <div class="security-card reveal-init">
+                        <div class="security-visual">
+                            <img src="Password.png" alt="Password Entry" class="security-img">
+                        </div>
+                        <div class="security-info">
+                            <h3>Folder-Level Security</h3>
+                            <p>Protect any playlist or sidebar folder with a custom password. Visual feedback and max attempt limits ensure your content stays private.</p>
+                        </div>
+                    </div>
+                    <div class="security-card reveal-init">
+                        <div class="security-visual">
+                            <img src="Password1.png" alt="Locked Content" class="security-img">
+                        </div>
+                        <div class="security-info">
+                            <h3>Locked Thumbnails</h3>
+                            <p>Content remains hidden until verified. View folder thumbnails and metadata only after successful password authentication.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Excellence -->
+        <section id="tech" class="tech section-padding bg-alt">
+            <div class="container">
+                <div class="tech-layout">
+                    <div class="tech-content">
+                        <h2 class="section-title">Technical Excellence</h2>
+                        <p class="mb-4">For the geeks who care about every frame and every bit.</p>
+                        <ul class="tech-list">
+                            <li>
+                                <i data-lucide="cpu"></i>
+                                <div>
+                                    <h4>Low Memory Footprint</h4>
+                                    <p>Less than 500MB RAM usage during 4K playback for a lightweight experience.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i data-lucide="activity"></i>
+                                <div>
+                                    <h4>Hardware-Accelerated Engine</h4>
+                                    <p>Native support for NVENC, AMF, and QSV encoders.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i data-lucide="clock"></i>
+                                <div>
+                                    <h4>Dual-Seek Technology</h4>
+                                    <p>Combines fast-seeking with frame-accurate precision for a responsive timeline.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i data-lucide="layers"></i>
+                                <div>
+                                    <h4>Modern Tech Stack</h4>
+                                    <p>Built on Electron with a high-performance FFmpeg backend.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tech-visual">
+                        <div class="code-box">
+                            <pre><code><span class="code-comment">// Intelligent GPU Detection</span>
+<span class="code-keyword">const</span> gpu = <span class="code-function">detectHardware</span>();
+<span class="code-keyword">if</span> (gpu.vendor === <span class="code-string">'NVIDIA'</span>) {
+  <span class="code-function">enableNVENC</span>();
+} <span class="code-keyword">else</span> <span class="code-keyword">if</span> (gpu.vendor === <span class="code-string">'AMD'</span>) {
+  <span class="code-function">enableAMF</span>();
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question">What formats does VPlayer support? <i data-lucide="chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Virtually everything. Thanks to our integrated FFmpeg engine, if it's a video file, VPlayer can play it.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Is it free? <i data-lucide="chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes, VPlayer is currently free to use during our beta period.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Does it support 4K? <i data-lucide="chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Absolutely. We’ve optimized the rendering pipeline specifically for high-bitrate 4K content.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can I create my own plugins? <i data-lucide="chevron-down"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes! VPlayer is built with extensibility in mind. You can write your own audio visualizers using standard JavaScript and the Canvas API.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="final-cta section-padding text-center">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready to upgrade your viewing experience?</h2>
+                    <p class="mb-4">Join our community of power users and start using VPlayer today.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Download VPlayer Now</a>
+                    <p class="text-muted mt-3 small">Compatible with Windows 10/11</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 VPlayer. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i data-lucide="github"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
